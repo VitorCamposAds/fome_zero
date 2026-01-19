@@ -77,7 +77,7 @@ setup_page("Visão País", "🌍")
 # =============================================================================
 # Layout Streamlit
 # =============================================================================
-st.markdown("<h1 style='text-align: center;'>Visão Paíse</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Visão País</h1>", unsafe_allow_html=True)
 
 
 with st.container():
