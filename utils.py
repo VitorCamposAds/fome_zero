@@ -85,7 +85,8 @@ def setup_sidebar(logo_path: str = LOGO_PATH, company_name: str = "Fome Zero", s
 # ==============================================================================
 
 # Caminho base do projeto (raiz)
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 # Pasta de imagens
 LOGO_DIR = os.path.join(BASE_DIR, "logo")
