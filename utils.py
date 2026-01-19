@@ -247,23 +247,13 @@ def rename_columns(dataframe: pd.DataFrame) -> pd.DataFrame:
 # =============================================================================
 # Sidebar (Streamlit)
 # =============================================================================
-def sidebar_filters(df: pd.DataFrame) -> pd.DataFrame:
+def sidebar_filters(df: pd.DataFrame, page_name: str) -> pd.DataFrame:
     """
     Cria os filtros da sidebar do Streamlit.
-
-    Parâmetros
-    ----------
-    df : pd.DataFrame
-        DataFrame limpo.
-
-    Retorna
-    -------
-    pd.DataFrame
-        DataFrame filtrado.
     """
+
     base_dir = os.path.dirname(os.path.abspath(__file__))
     image_path = os.path.join(base_dir, "logo", "logo.png")
-
     image = Image.open(image_path)
     st.sidebar.image(image, width=120)
 
@@ -271,10 +261,14 @@ def sidebar_filters(df: pd.DataFrame) -> pd.DataFrame:
     st.sidebar.markdown("## Encontre os melhores restaurantes")
     st.sidebar.markdown("---")
 
+    # Gera um key único por página
+    key_multiselect = f"filter_country_multiselect_{page_name}"
+
     country_options = st.sidebar.multiselect(
         "Filtre selecionando os países",
         sorted(EXCHANGE_RATES_TO_USD.keys()),
         default=sorted(EXCHANGE_RATES_TO_USD.keys()),
+        key=key_multiselect
     )
 
     st.sidebar.markdown("---")

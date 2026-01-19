@@ -61,7 +61,7 @@ df_filtered = df.copy()
 # =============================================================================
 # Sidebar
 # =============================================================================
-df_filtered = sidebar_filters(df_filtered)
+df_filtered = sidebar_filters(df.copy(), page_name='3_Visão_País')  # ou df_filtered = df.copy()
 
 # =============================================================================
 # Background

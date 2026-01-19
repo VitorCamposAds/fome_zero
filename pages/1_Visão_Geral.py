@@ -66,14 +66,14 @@ df_filtered = df.copy()
 # Sidebar
 # ===============================================================
 
-df_filtered = sidebar_filters(df_filtered)
+df_filtered = sidebar_filters(df.copy(), page_name='1_Visão_Geral')  # ou df_filtered = df.copy()
 
 # ===============================================================
 # Background
 # ===============================================================
 background()
 
-df1 = df.copy()
+
 
 # ===============================================================
 # Streamlit Layout - Métricas
@@ -102,24 +102,25 @@ div[data-testid="stMetric"] label {
     unsafe_allow_html=True
 )
 
+# Métricas
 with st.container():
     col1, col2, col3, col4, col5 = st.columns(5, gap="small")
 
     with col1:
-        metric_restaurantes(df1)
+        metric_restaurantes(df_filtered)
     with col2:
-        metric_paises(df1)
+        metric_paises(df_filtered)
     with col3:
-        metric_cidades(df1)
+        metric_cidades(df_filtered)
     with col4:
-        metric_qtde_avaliacoes(df1)
+        metric_qtde_avaliacoes(df_filtered)
     with col5:
-        metric_qtde_culinaria(df1)
+        metric_qtde_culinaria(df_filtered)
 
 # ===============================================================
 # Mapa de Cidades
 # ===============================================================
-mapa_cidades(df1)
+mapa_cidades(df_filtered)
 
 # ===============================================================
 # final do arquivo

@@ -56,7 +56,8 @@ df_filtered = df.copy()
 # =============================================================================
 # Sidebar
 # =============================================================================
-df_filtered = sidebar_filters(df_filtered)
+
+df_filtered = sidebar_filters(df.copy(), page_name='2_Visão_Cidade')  # ou df_filtered = df.copy()
 
 # =============================================================================
 # Background
@@ -69,7 +70,6 @@ background()
 
 setup_page("Visão Cidade", "🏙️")   
 
-df1 = df.copy()
 
 # =============================================================================
 # Layout Streamlit
@@ -87,7 +87,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-top10_cidades_media_acima_4(df1)
+top10_cidades_media_acima_4(df_filtered)
 
 st.markdown("---")
 
@@ -99,7 +99,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-top10_cidades_media_baixa(df1)
+top10_cidades_media_baixa(df_filtered)
 
 st.markdown("---")
 
@@ -112,7 +112,7 @@ with st.container():
             "Top 5 cidades com prato para 2 mais caro</h5>",
             unsafe_allow_html=True,
         )
-        cidades_com_prato_mais_caro_2(df1)
+        cidades_com_prato_mais_caro_2(df_filtered)
 
     with col2:
         st.markdown(
@@ -120,7 +120,7 @@ with st.container():
             "Top 5 cidades com mais diversidade culinária</h5>",
             unsafe_allow_html=True,
         )
-        culinaria_distinta(df1)
+        culinaria_distinta(df_filtered)
 
 st.markdown("---")
 
@@ -133,7 +133,7 @@ with st.container():
             "Cidades Com Restaurantes Que Aceitam Reserva</h4>",
             unsafe_allow_html=True,
         )
-        cidades_restaurantes_reserva(df1)
+        cidades_restaurantes_reserva(df_filtered)
 
     with col2:
         st.markdown(
@@ -141,7 +141,7 @@ with st.container():
             "Cidades Com Restaurantes Rue Realizam Entregas</h4>",
             unsafe_allow_html=True,
         )
-        restaurantes_entregando_agora(df1)
+        restaurantes_entregando_agora(df_filtered)
 
 # ===============================================================
 # final do arquivo

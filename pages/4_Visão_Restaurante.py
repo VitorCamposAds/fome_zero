@@ -56,15 +56,13 @@ df_filtered = df.copy()
 # =============================================================================
 # Sidebar
 # =============================================================================
-df_filtered = sidebar_filters(df_filtered)
+
+df_filtered = sidebar_filters(df.copy(), page_name='4_Visão Restaurante')  # ou df_filtered = df.copy()
 
 # =============================================================================
 # Background
 # =============================================================================
 background()
-#==============================================================================
-df1 = df.copy()
-
 # =============================================================================
 # Configura título e ícone da página
 # =============================================================================
@@ -84,19 +82,19 @@ with st.container():
     col1, col2, col3, col4, col5 = st.columns(5, gap='small')
     
     with col1:
-        mais_avaliacoes(df1)
+        mais_avaliacoes(df_filtered)
     
     with col2:
-        media_preco_para_dois(df1)
+        media_preco_para_dois(df_filtered)
     
     with col3:
-        entrega_online(df1)
+        entrega_online(df_filtered)
     
     with col4:
-        tem_reserva(df1)
+        tem_reserva(df_filtered)
     
     with col5:
-        diversidade_culinaria(df1)
+        diversidade_culinaria(df_filtered)
 
 st.markdown('---')
 
@@ -107,7 +105,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-plot_top_restaurants(df1)
+plot_top_restaurants(df_filtered)
  
 st.markdown('---')
 
@@ -116,7 +114,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-plot_top_cuisines(df1, top_n=10)
+plot_top_cuisines(df_filtered, top_n=10)
 
 st.markdown('---')
 
@@ -126,7 +124,7 @@ st.markdown(
             "<h3 style='text-align: center;'>Votos Médios: Online vs Offline</h3>",
             unsafe_allow_html=True
            )
-plot_votes_online_vs_offline(df1)  # sua função de plot
+plot_votes_online_vs_offline(df_filtered)  # sua função de plot
 
 st.markdown('---')
 
@@ -137,7 +135,7 @@ st.markdown(
         unsafe_allow_html=True
     )
 
-plot_correlation_heatmap(df1)
+plot_correlation_heatmap(df_filtered)
 
 st.markdown('---')
     
@@ -149,11 +147,11 @@ with st.container():
                     "<h3 style='text-align: center;'>Restaurantes Com As Melhores Médias De Avaliação</h3>",
                     unsafe_allow_html=True
                    )
-        melhores_e_piores(df1, tipo='melhores')
+        melhores_e_piores(df_filtered, tipo='melhores')
   
     with col2:
         st.markdown(
                     "<h3 style='text-align: center;'>Restaurantes Com As Piores Médias De Avaliação</h3>",
                     unsafe_allow_html=True
                    )
-        melhores_e_piores(df1, tipo='piores')
+        melhores_e_piores(df_filtered, tipo='piores')
