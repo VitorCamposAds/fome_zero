@@ -1,0 +1,37 @@
+Análise da matriz de correlação
+
+A análise de correlação entre as principais variáveis do dataset revela padrões relevantes de comportamento dos restaurantes, especialmente em relação a avaliação, preço e delivery.
+
+Avaliação dos Restaurantes
+
+Observa-se uma correlação positiva moderada entre a nota média dos restaurantes (aggregate_rating) e o número de votos (votes). Isso indica que restaurantes melhor avaliados tendem a receber mais avaliações dos clientes, sugerindo maior engajamento do público.
+
+Além disso, há uma relação fraca a moderada entre a nota média e o custo médio para duas pessoas (average_cost_for_two), indicando que restaurantes mais caros apresentam, em média, avaliações ligeiramente superiores. No entanto, a relação entre avaliação e faixa de preço (price_range) é fraca, o que sugere que o nível de preço, por si só, não é um fator determinante para a avaliação do restaurante.
+
+Preço e Estrutura de Custos
+
+O custo médio para duas pessoas apresenta uma forte correlação positiva com a faixa de preço, um resultado esperado e consistente com a lógica de mercado: quanto maior o custo médio, maior a categoria de preço do restaurante.
+
+Por outro lado, restaurantes que oferecem delivery online tendem a possuir custos mais baixos, assim como aqueles que estão entregando no momento da análise. Isso sugere que o serviço de delivery está mais associado a estabelecimentos de menor ticket médio.
+
+Delivery
+
+A análise evidencia uma forte relação entre possuir delivery online e estar realizando entregas no momento, indicando consistência operacional entre essas duas variáveis. Adicionalmente, o delivery é mais comum em restaurantes posicionados em faixas de preço mais acessíveis, reforçando o perfil de conveniência desse tipo de serviço.
+
+Reserva de Mesas
+
+A variável has_table_booking apresenta correlações próximas de zero com as demais, indicando que a possibilidade de reserva de mesas é amplamente independente de preço, avaliação ou serviços de delivery.
+
+Considerações Importantes
+
+É fundamental destacar que correlação não implica causalidade. Por exemplo, embora restaurantes mais caros apresentem avaliações ligeiramente melhores, isso não significa que o preço seja a causa direta de uma boa avaliação. Ademais, correlações fracas possuem baixo poder explicativo e devem ser interpretadas com cautela.
+
+Síntese Executiva
+
+Relações fortes: custo médio × faixa de preço; delivery online × entrega ativa
+
+Relações moderadas: nota média × número de votos
+
+Variáveis pouco relacionadas: reserva de mesas
+
+Esse conjunto de insights contribui para uma melhor compreensão do posicionamento dos restaurantes e pode apoiar decisões estratégicas relacionadas a precificação, serviços e experiência do cliente.
