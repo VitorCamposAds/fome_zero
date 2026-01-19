@@ -2,7 +2,7 @@
 
 ## 📌 Contexto do Problema de Negócio
 
-Você foi contratado como **Cientista de Dados** pela empresa **Fome Zero**, um *marketplace de restaurantes* cujo objetivo é conectar clientes a restaurantes ao redor do mundo.
+Análise de dados para a empresa **Fome Zero**, um *marketplace de restaurantes* cujo objetivo é conectar clientes a restaurantes ao redor do mundo.
 
 Os restaurantes cadastrados na plataforma fornecem diversas informações, como:
 
@@ -153,8 +153,11 @@ Perguntas respondidas:
 * Python
 * Pandas
 * Streamlit
-* Plotly / Matplotlib (se aplicável)
-* Jupyter Notebook (análises exploratórias)
+* Plotly
+* matplotlib
+* git
+* github
+
 
 ---
 
@@ -180,9 +183,9 @@ streamlit run app.py
 
 Este projeto demonstra como dados podem ser transformados em **insights estratégicos**, auxiliando diretamente a tomada de decisão da liderança da empresa.
 
-O dashboard é totalmente interativo, permitindo filtros dinâmicos e análises exploratórias em diferentes níveis de granularidade.
+O dashboard é totalmente interativo, permitindo filtros e análises exploratórias.
 
 ---
 
 👨‍💻 **Autor:** Vitor Costa
-📊 **Projeto:** Cientista de Dados — Fome Zero
+📊 **Projeto:** Analista de Dados — Fome Zero
