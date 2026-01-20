@@ -98,11 +98,13 @@ Analisa tendências por tipo de culinária, guiado por perguntas como:
 ## 🛠️ Tecnologias Utilizadas
 - Python  
 - Pandas  
-- Streamlit  
+- Streamlit & Streamlit Cloud
 - Plotly  
 - Matplotlib  
 - Git  
-- GitHub  
+- GitHub
+- Jupyter Lab
+- Terminal  
 
 ---
 
